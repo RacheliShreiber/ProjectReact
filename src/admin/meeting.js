@@ -47,7 +47,7 @@ function MeetItem({ meetItem }) {
           Meeting Details
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          <span style={{ fontWeight: 'bold' }}>Service Type: </span> {storeService.dataServices?.filter(item => item.id == meetItem.serviceType).name};
+          <span style={{ fontWeight: 'bold' }}>Service Type: </span> {storeService.dataServices?.filter(item => item.id == meetItem.serviceType)[0].name};
         </Typography>
         <Typography variant="body2" color="text.secondary">
           <span style={{ fontWeight: 'bold' }}> Date and Time: </span>{new Date(meetItem.dateTime).toLocaleString()}

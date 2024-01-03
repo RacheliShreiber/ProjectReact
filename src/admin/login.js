@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Avatar, Box, IconButton, InputAdornment, Tooltip, Typography } from "@mui/material";
+import { Alert, Avatar, Box, IconButton, InputAdornment, Tooltip, Typography } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send'
 import TextField from '@mui/material/TextField';
 import { Visibility, VisibilityOff } from "@mui/icons-material";
@@ -66,7 +66,7 @@ export default function Login() {
                     </IconButton>
                 </Tooltip>
             </form>
-            {flagAdmin && <Typography variant="body2" color="error">the user name or password not correct!!!</Typography>}
+            {flagAdmin && <Alert severity="error" sx={{width:"50ch",marginLeft:"25%"}}>the user name or password not correct!!!</Alert>}
         </>
     )
 }
